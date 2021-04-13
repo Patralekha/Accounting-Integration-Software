@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="style1.css">
+
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.js"></script>
+
+
+  <link rel="stylesheet" href=https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.2/css/select.dataTables.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js
+  "></script>
+
+  <script src="https://cdn.datatables.net/select/1.3.2/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
+
+
+<script src="admin.js"></script>
+
+<script>
+   window.onload=loadUsers;
+</script>
+
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color:cornsilk;
+}
+.users{
+  margin-top: 40px;
+}
+
+
+a.fa-bell {
+  position: relative;
+  font-size: 1.4em;
+  color: grey;
+  cursor: pointer;
+}
+span.fa-comment {
+  position: absolute;
+  font-size: 0.9em;
+  top: -4px;
+  color: rgb(253, 2, 2);
+  right: -4px;
+}
+span.num {
+  position: absolute;
+  font-size: 0.5em;
+  top: 0px;
+  color: rgb(8, 8, 8);
+  right: 2px;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .header-icon i {
+      padding: 10px 4px;
+  }
+  .l-side-box {
+      display: none;
+  }
+  .main-box {
+      /* margin: 50px 0 150px 0; */
+      margin: 30px 0 150px 0;
+  }
+  .shdl-table-box {
+
+      overflow-x: auto;
+  }
+
+  body {
+      font-family: 'Lato', sans-serif;
+  }
+
+  .login-img1{
+      margin-left: 0px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #42b7d4)">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link">
+               <span style="cursor:pointer" onclick="window.location.reload()">&#9776; Admin Panel</span>
+             </a>
+            </li>
+           
+        </ul>
+        <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Services
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">About
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Clients
+                </a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="">Contact
+                </a>
+              </li>
+
+
+              <li class="nav-item active"  id="logout" name="logout">
+                <a class="nav-link" onclick="logout()" style="cursor: pointer;">Logout 
+                </a>
+              </li>
+
+              <!--li class="nav-item active"  id="notification" name="notification">
+                <a class="nav-link fa fa-bell"  style="cursor: pointer;" href="https://google.com">
+                  <div><span class="fa fa-comment"></span> 
+                  <span class="num">2</span>
+                </div>
+                </a> 
+               
+              </li-->
+          
+          
+        </ul>
+        <ul class="navbar-nav" style="float:right;">
+            
+            </ul>
+         
+      </div>
+
+      <a href class="text-center log-9b navbar-brand">
+        <span class="log-th">&#xae; Recko</span>
+        <span class="log-block">Accounting</span>
+    </a>
+    </div>
+  </nav>
+
+
+  <div class="container" style="text-align:center;">
+
+    <div id="connectionStatus"></div>
+    
+    <div class="row">
+     
+      <div class="col-md-1"></div>
+      
+    </div>
+    
+    <div class="row"></div>
+    <div class="row">
+      
+
+      <div class="col-md-6">
+
+      </div>
+    
+     
+      <div class="col-md-8 users">
+
+        <p style="font-size:xx-large;">Grant or revoke admin privileges to users</p>
+        <ul class="list-group" id="allusers" name="allusers" style="text-align:left;">
+        
+        </ul>
+        <br><br><br><br>
+    </div>
+    
+
+    <hr>
+    <div class="col-md-6">
+      <p style="font-size:xx-large;">Connect to Quickbooks or Xero to fetch data from an organization</p>
+      <a class="btn btn-lg btn-success btn-block" href="http://127.0.0.1:8000/quickbook">Connect to Quickbooks</a>&nbsp;&nbsp;
+      <a class="btn btn-lg btn-danger btn-block" href="http://127.0.0.1:8000/xero">Connect to Xero</a>
+      <br><br><br><br>
+    </div>
+    <hr>
+
+    <div class="col-md-6">
+      <p style="font-size:xx-large;">Add,Delete or Modify Xero or Quickbooks Accounts</p>
+      <button class="btn btn-lg btn-success btn-block" onclick='quickbookAccounts()'>Add,Delete or Configure multiple Quickbooks accounts</button>&nbsp;&nbsp;
+      <button class="btn btn-lg btn-danger btn-block" onclick='xeroAccounts()'>Add,Delete or Configure multiple Xero accounts</button>
+      <br><br><br><br>
+    </div>
+  
+    <hr>
+
+    <div class="col-md-6">
+      <p style="font-size:xx-large;">Add,Delete Users to/from  Xero or Quickbooks organization</p>
+      <button class="btn btn-lg btn-success btn-block" onclick="quickbookUsers()">Add,Delete Users to/from Quickbooks organization</button>&nbsp;&nbsp;
+      <button class="btn btn-lg btn-danger btn-block" onclick="xeroUsers()">Add,Delete Users to/from Xero organization</button>
+      <br><br><br><br>
+    </div>
+  
+    <hr>
+
+   
+
+</div>
+</div>
+
+
+<script>
+
+</script>
+   
+</body>
+</html> 

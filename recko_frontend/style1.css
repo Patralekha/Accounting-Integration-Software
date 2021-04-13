@@ -1,0 +1,161 @@
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color:cornsilk;
+}
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+table {
+  width: 100%;
+  margin: 30px auto;
+  table-layout: auto;
+  padding: 2px;
+}
+
+.fixed {
+  table-layout: fixed;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+}
+
+.w {
+  width: 400px;
+}
+
+
+
+
+a.fa-bell {
+  position: relative;
+  font-size: 1.4em;
+  color: grey;
+  cursor: pointer;
+}
+span.fa-comment {
+  position: absolute;
+  font-size: 0.9em;
+  top: -4px;
+  color: rgb(253, 2, 2);
+  right: -4px;
+}
+span.num {
+  position: absolute;
+  font-size: 0.5em;
+  top: 0px;
+  color: rgb(8, 8, 8);
+  right: 2px;
+}
+
+div.ex3 {
+  float: right;
+  
+  
+}
+#rec{
+  float: right;
+  margin-right: 2px;
+}
+
+.text-wrap{
+  white-space:normal;
+}
+.width-200{
+  width:100px;
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  body{
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /*.input-daterange{
+    margin-left:230px;
+  }
+  .input-amt-range{
+    margin-left:230px;
+  }*/
+  .header-icon i {
+      padding: 10px 4px;
+  }
+  .l-side-box {
+      display: none;
+  }
+  .main-box {
+      /* margin: 50px 0 150px 0; */
+      margin: 30px 0 150px 0;
+  }
+  .shdl-table-box {
+
+      overflow-x: auto;
+  }
+
+  body {
+      font-family: 'Lato', sans-serif;
+  }
+
+  .login-img1{
+      margin-left: 0px;
+  }
+}
+
+
+
